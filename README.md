@@ -2,7 +2,7 @@
 A bash script for managing ACP VPN profiles using OpenVPN
 
 ## Prerequisites
-- brew install openvpn
+- brew install openvpn watch
 
 ## Run
 - `./acp_vpn.sh start all` - Starts all VPN Profiles listed in bash
