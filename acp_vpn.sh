@@ -4,6 +4,7 @@ export PATH=$(brew --prefix openvpn)/sbin:$PATH
 
 PROFILES=( kube-platform acp-prod jira-confluence )
 PROFILES_LABELS=( 'Kube Platform' 'ACP Prod' 'JIRA' )
+PROFILE_TYPE=Default
 
 # Renders a text based list of options that can be selected by the
 # user using up, down and enter keys and returns the chosen option.
@@ -142,7 +143,7 @@ function refresh_vpn_profiles {
   find "/Users/$USER/Downloads" -mtime +2 -name "vpn-*.ovpn" -type f -delete
 
   for profile in "${USE_PROFILES[@]}"; do
-    /usr/bin/open -a "/Applications/Google Chrome.app" "https://access-acp.digital.homeoffice.gov.uk/ui/profiles/$profile/issue?template=Default"
+    /usr/bin/open -a "/Applications/Google Chrome.app" "https://access-acp.digital.homeoffice.gov.uk/ui/profiles/$profile/issue?template=$PROFILE_TYPE"
     sleep 1
   done
 }
