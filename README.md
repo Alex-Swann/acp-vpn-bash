@@ -18,11 +18,11 @@ This needs to be run in root user mode to ensure VPN profiles can be loaded
 ## Local
 You can add the following to your `~/.bashrc` or `~/.bash_profile` to alias the commands
 ```
-alias vpn_start='sudo ./acp_vpn.sh start'
-alias vpn_stop='sudo ./acp_vpn.sh stop'
-alias vpn_refresh='sudo ./acp_vpn.sh refresh'
-alias vpn_list='sudo ./acp_vpn.sh list'
-alias vpn_watch='sudo ./acp_vpn.sh watch'
+alias vpn_start="sudo $HOME/Documents/acp-vpn-bash/acp_vpn.sh start"
+alias vpn_stop="sudo $HOME/Documents/acp-vpn-bash/acp_vpn.sh stop"
+alias vpn_refresh="sudo $HOME/Documents/acp-vpn-bash/acp_vpn.sh refresh"
+alias vpn_list="sudo $HOME/Documents/acp-vpn-bash/acp_vpn.sh list"
+alias vpn_watch="sudo $HOME/Documents/acp-vpn-bash/acp_vpn.sh watch"
 ```
 
 ## Selections
