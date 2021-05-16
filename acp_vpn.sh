@@ -153,7 +153,10 @@ function watch_vpns {
 }
 
 function list_vpns {
-  ps -ax | GREP_COLOR='1;32' grep --color=always -i '[o]penvpn --config'
+  for profile in "${PROFILES[@]}"; do
+    initial="$(echo $profile | head -c 1)"
+    ps -ax | GREP_COLOR='1;32' grep --color=always -i "[$initial]${profile:1}"
+  done
 }
 
 for i in "${!PROFILES[@]}"; do
