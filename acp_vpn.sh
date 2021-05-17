@@ -134,7 +134,8 @@ function startup_vpns {
 
 function shutdown_vpns {
   for profile in "${USE_PROFILES[@]}"; do
-    sudo kill $(ps -ax | grep -i $profile | head -1 | awk '{print $1}')
+    initial="$(echo $profile | head -c 1)"
+    sudo kill $(ps -ax | grep -i "[$initial]${profile:1}" | head -1 | awk '{print $1}')
   done
   echo "Shutting down VPNs!"
 }
