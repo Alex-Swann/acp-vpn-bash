@@ -141,7 +141,7 @@ function shutdown_vpns {
 }
 
 function refresh_vpn_profiles {
-  find "/Users/$USER/Downloads" -mtime +2 -name "vpn-*.ovpn" -type f -delete
+  find "$HOME/Downloads" -mtime +2 -name "vpn-*.ovpn" -type f -delete
 
   for profile in "${USE_PROFILES[@]}"; do
     /usr/bin/open -a "/Applications/Google Chrome.app" "https://access-acp.digital.homeoffice.gov.uk/ui/profiles/$profile/issue?template=$PROFILE_TYPE"
