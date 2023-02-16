@@ -2,9 +2,9 @@
 A bash script for managing ACP VPN profiles using OpenVPN.
 ACP VPN profiles - https://access-acp.digital.homeoffice.gov.uk/ui/profiles
 
-When refreshing VPN profiles, Chrome browser is opened to authenticate using 365 if needs be. Otherwise VPNs are downloaded automatically and Chrome tabs closed. Then the latest VPN downloaded of the desired profile is used, and any others older than 2 days old are removed from the specified download folder.
+When refreshing VPN profiles, Chrome browser is opened to authenticate using 365 if needs be. Otherwise VPNs are downloaded automatically. Then the latest VPN is downloaded and the desired profile is used. Any others older than 2 days old are removed from the specified download folder. It is possible to download all specified VPNs in the array at the top of the file all at once, and then run them all in parallel. This can be a benefit over using Tunnelblick on Mac which I believe can only run one at a time.
 
-Any VPNs restarted with ensure to remove any historically running instances to ensure there aren't duplicate VPN of the same profile name running. The PID is discovered and this is used to determine any preexisting VPNs of the same profile name running.
+If any VPNs are stopped and restarted, the script will ensure to remove any historically running instances to ensure no duplicate VPNs of the same profile name are running. The PID is looked up and this is used to determine if any preexisting VPNs are running, and if so, the processes are killed off.
 
 ## Prerequisites
 - brew install openvpn watch
