@@ -36,3 +36,13 @@ A CLI menu comes up for selections. Choices can be selected using `spacebar` and
 
 ## Profile Type
 This uses the 'Default' profile type from ACP. This can be overwritten to use 'ChromeOS'
+
+## Troubleshooting
+If you get any issues like the following:
+```
+sudo: ./acp_vpn.sh: command not found
+```
+You can run the following that should resolve the issue:
+```
+chmod 777 acp_vpn.sh
+```
