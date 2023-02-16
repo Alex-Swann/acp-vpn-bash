@@ -2,7 +2,7 @@
 A bash script for managing ACP VPN profiles using OpenVPN.
 ACP VPN profiles - https://access-acp.digital.homeoffice.gov.uk/ui/profiles
 
-When refreshing VPN profiles, Chrome browser is opened to authenticate using 365 if needs be. Otherwise VPNs are downloaded automatically and Chrome tabs closed. Then the latest VPN downloaded of the desired profile is used, and any others older than 2 years old are removed from the specified download folder.
+When refreshing VPN profiles, Chrome browser is opened to authenticate using 365 if needs be. Otherwise VPNs are downloaded automatically and Chrome tabs closed. Then the latest VPN downloaded of the desired profile is used, and any others older than 2 days old are removed from the specified download folder.
 
 Any VPNs restarted with ensure to remove any historically running instances to ensure there aren't duplicate VPN of the same profile name running. The PID is discovered and this is used to determine any preexisting VPNs of the same profile name running.
 
