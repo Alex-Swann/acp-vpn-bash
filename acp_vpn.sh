@@ -167,22 +167,14 @@ done
 if [ "$1" == 'refresh' ]; then
   selected_values $2
   refresh_vpn_profiles
-fi
-
-if [ "$1" == 'start' ]; then
+elif [ "$1" == 'start' ]; then
   selected_values $2
   startup_vpns
-fi
-
-if [ "$1" == 'stop' ]; then
+elif [ "$1" == 'stop' ]; then
   selected_values $2
   shutdown_vpns
-fi
-
-if [ "$1" == 'watch' ]; then
+elif [ "$1" == 'watch' ]; then
   watch_vpns
-fi
-
-if [ "$1" == 'list' ]; then
+elif [ "$1" == 'list' ]; then
   list_vpns
 fi
